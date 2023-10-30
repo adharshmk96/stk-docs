@@ -1,5 +1,7 @@
 # Website
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d3a697d5-0899-4641-b5a8-9c4d50f8a329/deploy-status)](https://app.netlify.com/sites/stk-docs/deploys)
+
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
 ### Installation

@@ -16,8 +16,7 @@ go install github.com/adharshmk96/stk@latest
 If installation fails, check the `GOPATH` and `GOBIN` environment variables. Make sure that `GOBIN` is added to your `PATH`.
 
 ```bash
-echo export PATH=$PATH:$GOBIN >> ~/.profile
-source ~/.profile
+echo export PATH=$PATH:$GOBIN >> ~/.profile && source ~/.profile
 ```
 
 ### Directly download the binary:
