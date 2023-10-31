@@ -1,9 +1,8 @@
 ---
-id: getting-started
 sidebar_position: 2
-title: Getting Started
-sidebar_label: Getting Started
 ---
+
+# Getting Started
 
 ## Installation
 
