@@ -1,9 +1,8 @@
 ---
-id: project-structure
-title: Project Structure
 sidebar_position: 3
-sidebar_label: Project Structure
 ---
+
+# Project Structure
 
 The project structure will look like this:
 
