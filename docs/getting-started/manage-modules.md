@@ -1,8 +1,8 @@
 ---
-id: add-remove-modules
+id: manage-modules
 sidebar_position: 2
-title: Add or Remove modules
-sidebar_label: Add or Remove modules
+title: Manage modules
+sidebar_label: Manage modules
 ---
 
 ## Adding A Module
