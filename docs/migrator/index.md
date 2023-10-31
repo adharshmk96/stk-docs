@@ -4,7 +4,6 @@ sidebar_position: 2
 title: Migrator
 sidebar_label: Migrator
 ---
-# Migrator
 
 - CLI tool for generating migration files and running migrations
 - Supported databases
