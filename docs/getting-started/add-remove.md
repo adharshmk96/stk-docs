@@ -1,9 +1,11 @@
 ---
-id: add-modules
+id: add-remove-modules
 sidebar_position: 2
-title: Adding modules
-sidebar_label: Adding modules
+title: Add or Remove modules
+sidebar_label: Add or Remove modules
 ---
+
+## Adding A Module
 
 To add a module boilerplate to the project, you need to run the following command:
 
@@ -13,9 +15,23 @@ stk add -m
 
 eg: `stk add -m admin`
 
-This command will generate the boilerplate for the module and add the required files. The project structure will look like this:
+This command will generate the required files for the module.
 
-example of generated module `admin`:
+## Removing A Module
+
+To remove a module boilerplate from the project, you need to run the following command:
+
+```bash
+stk rm -m
+```
+
+eg: `stk rm -m admin`
+
+This command will remove the module related files from the project.
+
+## File Structure
+
+example of files related to module `admin`:
 
 ```
 internals
@@ -44,24 +60,5 @@ internals
 server
 └── routing
     └── admin.go        
-```
-
-You can start using the module by exposing the routes in `server/routing/initRoutes.go` file.
-
-example:
-
-```go
-package routing
-
-import (
-	"github.com/adharshmk96/stk/gsk"
-)
-
-func SetupApiRoutes(server *gsk.Server) {
-	apiRoutes := server.RouteGroup("/api")
-
-	setupPingRoutes(apiRoutes)
-	setupAdminRoutes(apiRoutes) // Admin 
-}
 ```
 
