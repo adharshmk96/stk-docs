@@ -1,9 +1,8 @@
 ---
-id: manage-modules
 sidebar_position: 2
-title: Manage modules
-sidebar_label: Manage modules
 ---
+
+# Manage Modules
 
 ## Adding A Module
 
