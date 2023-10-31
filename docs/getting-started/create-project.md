@@ -1,9 +1,8 @@
 ---
-id: project-initial
 sidebar_position: 1
-title: Creating a project
-sidebar_label: Creating a project
 ---
+
+# Create a project
 
 To start a project, you need to run the following command:
 
@@ -38,7 +37,7 @@ You can run this command in
 - Git repository : The repo name will be used as the package name.
 
 
-This will create the project structure and add the required files. 
+This will create the project structure and add the required files. read about the structure [here](/getting-started/project-structure)
 
 ### Tools
 
