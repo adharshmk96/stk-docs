@@ -4,38 +4,36 @@ sidebar_position: 3
 
 # Project Structure
 
-The philosophy behind this project structure is to parition between different segments such as 
+The philosophy behind this project structure is to parition between different segments for modules such as 
 
-- Core : Core data structures and interfaces for each modules.
-- Service : Business logic for each modules
-- Storage : Storage implementation for each modules
-- Http : Http handler functions for each modules which process the request and response
+- Domain : Core data structures and interfaces for the module.
+- Service : Business logic for the module.
+- Storage : Storage implementation for the module.
+- API : Http handlers and helpers for the module, for handling REST API.
+- Web : Http handlers and helpers for the module, for handling Web UI.
+- Serr : Errors for the module.
 
-The core package must not import other packages but can be a dependency for other segments of the app. Service, Storage, and Http packages shouldn't directly import each other; they connect through dependency injection at the routing level.
+Each segment should be mutually exclusive of each other, The dependencies should never cross the segment boundaries. Each segment is injected (dependancy injection) at routes.go setup file in the module.
 
 Then, the server level concerns such as routing, middleware, and infrastructure are separated from the core logic.
 
 ### Internals
 
-The internals directory contains the application logic and http , organized into various segments:
-- Entity & Errors
-- Http Handlers & Helpers
-- Service
-- Storage
+The internals directory contains the modules, and their Implementation for each segment. The modules are separated into different directories:
 
 Structure:
 
-- `internals/core`
-  - `/entity` - Primary data structures and interfaces for each modules.
-  - `/serr`  - Server specific errors for each modules.
-- `internals/http`
-  - `/handler` - Http handler functions for each modules which process the request and response. Implements the interfaces defined in `internals/core/entity` for each modules.
-  - `/helpers` - Helper functions for http handlers, for each modules.
-  - `/transport` - Data structure and Functions related to http response, for each modules.
-- `internals/service` - Business logic for each modules. Implements the interfaces defined in `internals/core/entity` for each modules.
-- `internals/storage`
-  - /`<module-name>Storage` - Storage implementation for each modules, Initialize and implement the storage interface defined in `internals/core/entity` for each modules.
+Module: `internals/<module-name>`
 
+- `domain` - Core data structures and interfaces for the module.
+- `serr`  - Server specific errors for each modules.
+- `api` - Http handlers and helpers for the module, for handling REST API.
+  - `/handler` - Http handler functions for each modules which process the request and response. Implements the interfaces defined in `domain` for each modules.
+  - `/transport` - Data structure and Functions related to http response, for each modules.
+- `web` - Http handlers and helpers for the module, for handling Web UI.
+- `service` - Business logic for each modules. Implements the interfaces defined in `domain` for each modules.
+- `storage` - Storage implementation for each modules. Implements the interfaces defined in `domain` for each modules.
+- `routes.go` - Setup file for each modules, where the dependencies are injected (dependancy injection) for each modules.
 
 ---
 
