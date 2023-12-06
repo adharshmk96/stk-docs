@@ -2,14 +2,18 @@
 sidebar_position: 2
 ---
 
+# Routing
+
 ### Routing HTTP methods: 
-Define routes for each HTTP method (Get, Post, Put, Delete, Patch) by calling the appropriate function.
+Define routes for each HTTP method (Get, Post, Put, Delete, Patch) by calling the corresponding function.
 
 ```go
 server.Get("/path", func(c *gsk.Context) {
     // handle the request
 })
 ```
+
+other methods: `Post`, `Put`, `Delete`, `Patch`
 
 #### Route Parameters:
 

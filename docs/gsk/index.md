@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# GSK Server Package Documentation
+# GSK Server Package
 
 The GSK server package is a lightweight and flexible HTTP server for Golang applications. It provides an interface for managing server lifecycle, adding middleware, routing HTTP methods, and handling static files. Moreover, the package includes features for automated testing of server responses.
 

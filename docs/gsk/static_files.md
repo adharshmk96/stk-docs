@@ -36,5 +36,5 @@ Variables can be accessed in template via `{{ .Var.Name }}`
 Constants can be accessed in template via `{{ .Const.Name }}`
 
 Available constants:
-- Static : static path
+- `{{ .Const.Static }}` : static path
 
