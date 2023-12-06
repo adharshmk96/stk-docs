@@ -1,6 +1,6 @@
 ---
 id: migrator
-sidebar_position: 2
+sidebar_position: 3
 title: Migrator
 sidebar_label: Migrator
 ---
